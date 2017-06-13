@@ -166,7 +166,6 @@ class Application(tk.Frame):
         # Test for completed boxes
         for i in range(len(self.boxes)):
             for j in range(len(self.boxes)):
-                #print self.boxes[i][j]
                 if self.boxes[i][j].completed and not self.boxes[i][j].claimed:
                     plyr = self.current_turn
                     plyr.score += 1
@@ -210,17 +209,8 @@ class Application(tk.Frame):
 
 
 def main():
-    # Argument for board size
-    if sys.argv[1:]:
-        n = string.atoi(sys.argv[1])
-        if 2 > n or n > 20:
-            print "Value must be between 2 and 20. Playing with default 5x5 grid."
-            n = 5
-    else:
-        n = 5
-
     app = Application(n)
-    app.master.title("Dot Game")
+    app.master.title("S2S")
     app.mainloop()
 
 # Call main when run as script
