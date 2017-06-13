@@ -1,0 +1,47 @@
+0	rest
+
+# these 12 are the 12 notes
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+
+13	ionian
+14	dorian
+15	phrygian
+16	lydian
+17	mixolydian
+18	aeolian
+19	locrian
+
+20	harmonic_minor
+21	melodic minor
+22	chromatic
+23	whole note
+
+24	quarter notes
+25	eighth notes notes
+26	sixteenth notes
+
+27	a
+28	a#
+29	b
+30	c
+31	c#
+32	d
+33	d#
+34	e
+35	f
+36	f#
+37	g
+38	g#
+
+39
