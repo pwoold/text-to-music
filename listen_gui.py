@@ -9,9 +9,7 @@
 from tkinter import *
 from tkinter import font
 import tkinter as tk
-import sys
-import string
-import random
+import string_conversion as sc
 
 # The graphical interface
 class Application(tk.Frame):
@@ -63,7 +61,8 @@ class Application(tk.Frame):
         if len(s) == 0:
             print("You need to enter a string!")
         else:
-            print(s)
+            x = sc.string_to_number(s)
+            print(x)
 
 
 
