@@ -1,9 +1,9 @@
-def string_to_ascii(s):
+def string_to_number(s):
 
-    ascii_values = []
+    number_values = []
     for ch in s:
-        ascii_values.append(ord(ch)%30)
+        number_values.append(ord(ch)%40)
         
-    return ascii_values
+    return number_values
 
-print(string_to_ascii("hello"))
+print(string_to_number("hello"))
