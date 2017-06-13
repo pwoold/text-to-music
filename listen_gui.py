@@ -6,9 +6,9 @@
 # 6/13/17
 #
 
-from Tkinter import *
-import Tkinter as tk
-import tkFont
+from tkinter import *
+from tkinter import font
+import tkinter as tk
 import sys
 import string
 import random
@@ -18,16 +18,16 @@ class Application(tk.Frame):
     WIDTH = 600
     HEIGHT = 400
 
-    def __init__(self, grid_size, master=None):
+    def __init__(self, master=None):
         tk.Frame.__init__(self, master)
         self.grid()
 
         # Display variables
         self.bgColor1 = "#AEE1FC"
         self.bgColor2 = "#BAFCAE"
-        self.titlefont = tkFont.Font(family='BlairMdITC TT', size=56, weight='bold')
-        self.buttonfont = tkFont.Font(family='Avalon', size=30)
-        self.messagefont = tkFont.Font(family='Helvetica', size=16, weight='bold')
+        self.titlefont = font.Font(family='BlairMdITC TT', size=56, weight='bold')
+        self.buttonfont = font.Font(family='Avalon', size=30)
+        self.messagefont = font.Font(family='Helvetica', size=16, weight='bold')
 
         # Start the game
         self.show_title_screen()
@@ -84,7 +84,7 @@ class Application(tk.Frame):
 
 
     def init_game_display(self):
-        font = tkFont.Font(family='Helvetica', size=16, weight='bold')
+        font = font.Font(family='Helvetica', size=16, weight='bold')
         # Set up the canvas
         self.board = tk.Canvas(self, width = self.WIDTH, height = self.HEIGHT)
         self.display_message = self.board.create_text(  self.WIDTH / 2,
@@ -203,13 +203,13 @@ class Application(tk.Frame):
             winning_message = self.player1.name + " Wins!"
         else:
             winning_message = "It's a tie!"
-        font = tkFont.Font(family='Helvetica', size=48, weight='bold')
+        font = font.Font(family='Helvetica', size=48, weight='bold')
         # self.board.create_rectangle(0,0,self.WIDTH, self.HEIGHT, fill='black')
         self.board.create_text(self.WIDTH / 2, self.HEIGHT / 2, text=winning_message, font = font, fill='white', activefill='magenta')
 
 
 def main():
-    app = Application(n)
+    app = Application()
     app.master.title("S2S")
     app.mainloop()
 
